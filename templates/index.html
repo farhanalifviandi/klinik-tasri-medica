@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klinik Iis — Kesehatan Keluarga Anda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-cross">✚</span>
+      <span>Klinik <em>Iis</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#dokter">Dokter</a></li>
+      <li><a href="#jadwal">Jadwal</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <a href="#daftar" class="btn-nav">Daftar Sekarang</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" id="closeMenu">✕</button>
+  <ul>
+    <li><a href="#home" onclick="closeMobile()">Beranda</a></li>
+    <li><a href="#layanan" onclick="closeMobile()">Layanan</a></li>
+    <li><a href="#dokter" onclick="closeMobile()">Dokter</a></li>
+    <li><a href="#jadwal" onclick="closeMobile()">Jadwal</a></li>
+    <li><a href="#kontak" onclick="closeMobile()">Kontak</a></li>
+    <li><a href="#daftar" onclick="closeMobile()" class="btn-mobile">Daftar Sekarang</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">🏥 Klinik Kesehatan Keluarga</div>
+    <h1>Kesehatan Anda<br /><em>Prioritas Kami</em></h1>
+    <p>Pelayanan medis profesional dengan sentuhan hangat dan penuh kepedulian untuk seluruh anggota keluarga Anda.</p>
+    <div class="hero-cta">
+      <a href="#daftar" class="btn-primary">Buat Janji Sekarang</a>
+      <a href="#layanan" class="btn-outline">Lihat Layanan</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>5000+</strong><span>Pasien Puas</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>10+</strong><span>Tahun Berpengalaman</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>8</strong><span>Dokter Spesialis</span></div>
+    </div>
+  </div>
+  <div class="hero-image-wrap">
+    <div class="hero-card">
+      <div class="card-inner">
+        <div class="pulse-ring"></div>
+        <span class="hero-icon">👩‍⚕️</span>
+      </div>
+      <p>dr. Iis Ismawati</p>
+      <small>Dokter Umum & Pimpinan Klinik</small>
+    </div>
+  </div>
+</section>
+
+<!-- LAYANAN -->
+<section id="layanan" class="layanan">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Apa yang Kami Tawarkan</div>
+      <h2>Layanan <em>Unggulan</em> Kami</h2>
+      <p>Kami menyediakan berbagai layanan kesehatan komprehensif untuk memenuhi kebutuhan Anda dan keluarga.</p>
+    </div>
+    <div class="layanan-grid">
+      <div class="layanan-card" data-delay="0">
+        <div class="card-icon">🩺</div>
+        <h3>Konsultasi Umum</h3>
+        <p>Pemeriksaan dan konsultasi dokter umum untuk segala keluhan kesehatan Anda sehari-hari.</p>
+        <div class="card-price">Mulai Rp 75.000</div>
+      </div>
+      <div class="layanan-card featured" data-delay="100">
+        <div class="featured-badge">Terpopuler</div>
+        <div class="card-icon">👶</div>
+        <h3>Kesehatan Ibu & Anak</h3>
+        <p>Perawatan khusus untuk ibu hamil, menyusui, dan tumbuh kembang bayi serta anak.</p>
+        <div class="card-price">Mulai Rp 90.000</div>
+      </div>
+      <div class="layanan-card" data-delay="200">
+        <div class="card-icon">💉</div>
+        <h3>Imunisasi</h3>
+        <p>Program imunisasi lengkap sesuai jadwal nasional untuk bayi, anak, dan dewasa.</p>
+        <div class="card-price">Mulai Rp 150.000</div>
+      </div>
+      <div class="layanan-card" data-delay="300">
+        <div class="card-icon">🔬</div>
+        <h3>Laboratorium</h3>
+        <p>Pemeriksaan laboratorium lengkap dengan peralatan modern dan hasil akurat cepat.</p>
+        <div class="card-price">Mulai Rp 50.000</div>
+      </div>
+      <div class="layanan-card" data-delay="400">
+        <div class="card-icon">💊</div>
+        <h3>Farmasi</h3>
+        <p>Apotek lengkap dengan obat-obatan berkualitas dan konsultasi apoteker berpengalaman.</p>
+        <div class="card-price">Resep & OTC</div>
+      </div>
+      <div class="layanan-card" data-delay="500">
+        <div class="card-icon">🩻</div>
+        <h3>USG & Rontgen</h3>
+        <p>Pemeriksaan imaging modern untuk diagnosis lebih tepat dan akurat.</p>
+        <div class="card-price">Mulai Rp 200.000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOKTER -->
+<section id="dokter" class="dokter">
+  <div class="container">
+    <div class="section-header light">
+      <div class="tag">Tim Medis Kami</div>
+      <h2>Dokter <em>Berpengalaman</em></h2>
+      <p>Didukung oleh tenaga medis profesional dan berdedikasi tinggi.</p>
+    </div>
+    <div class="dokter-grid">
+      <div class="dokter-card">
+        <div class="dokter-avatar">👩‍⚕️</div>
+        <h3>Iis Ismawati, M.Keb</h3>
+        <span class="spesialis">Dokter Umum</span>
+        <p>Pimpinan klinik dengan pengalaman 15 tahun dalam bidang kesehatan umum dan preventif.</p>
+        <div class="jadwal-chip">Senin – Jumat</div>
+      </div>
+      <div class="dokter-card">
+        <div class="dokter-avatar">👨‍⚕️</div>
+        <h3>Shafar Dewi Ananty tasri, S.Keb</h3>
+        <span class="spesialis">Dokter Spesialis Anak</span>
+        <p>Spesialis kesehatan anak dengan keahlian tumbuh kembang dan nutrisi pediatri.</p>
+        <div class="jadwal-chip">Selasa & Kamis</div>
+      </div>
+      <!-- <div class="dokter-card">
+        <div class="dokter-avatar">👩‍⚕️</div>
+        <h3>sas</h3>
+        <span class="spesialis">Kebidanan & Kandungan</span>
+        <p>Bidan senior berpengalaman dalam pendampingan kehamilan, persalinan, dan pasca melahirkan.</p>
+        <div class="jadwal-chip">Senin, Rabu, Sabtu</div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- JADWAL -->
+<section id="jadwal" class="jadwal">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Waktu Pelayanan</div>
+      <h2>Jam <em>Operasional</em></h2>
+    </div>
+    <div class="jadwal-wrap">
+      <div class="jadwal-table">
+        <div class="jadwal-row header">
+          <span>Hari</span>
+          <span>Jam Buka</span>
+          <span>Status</span>
+        </div>
+        <div class="jadwal-row">
+          <span>Senin – Jumat</span>
+          <span>08.00 – 20.00</span>
+          <span class="badge open">Buka</span>
+        </div>
+        <div class="jadwal-row">
+          <span>Sabtu</span>
+          <span>08.00 – 17.00</span>
+          <span class="badge open">Buka</span>
+        </div>
+        <div class="jadwal-row">
+          <span>Minggu</span>
+          <span>09.00 – 14.00</span>
+          <span class="badge open">Buka</span>
+        </div>
+        <div class="jadwal-row">
+          <span>Hari Besar</span>
+          <span>Terbatas</span>
+          <span class="badge limited">Terbatas</span>
+        </div>
+      </div>
+      <div class="jadwal-info">
+        <div class="info-box">
+          <span class="info-icon">📞</span>
+          <div>
+            <strong>Hotline</strong>
+            <p>0812-3456-7890</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <span class="info-icon">📍</span>
+          <div>
+            <strong>Lokasi</strong>
+            <p>Jl. Kesehatan No. 45, Bandung</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <span class="info-icon">🚨</span>
+          <div>
+            <strong>Darurat 24 Jam</strong>
+            <p>0800-1234-5678 (Gratis)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAFTAR / FORM -->
+<section id="daftar" class="daftar">
+  <div class="container">
+    <div class="daftar-inner">
+      <div class="daftar-text">
+        <div class="tag">Pendaftaran Online</div>
+        <h2>Buat Janji<br /><em>Sekarang</em></h2>
+        <p>Daftar online dan dapatkan konfirmasi jadwal via WhatsApp dalam 30 menit.</p>
+        <div class="daftar-benefit">
+          <div>✅ Tanpa antrian panjang</div>
+          <div>✅ Konfirmasi cepat</div>
+          <div>✅ Pengingat otomatis</div>
+        </div>
+      </div>
+      <form class="daftar-form" id="daftarForm">
+        <div class="form-group">
+          <label>Nama Lengkap</label>
+          <input type="text" placeholder="Nama Anda" required />
+        </div>
+        <div class="form-group">
+          <label>No. WhatsApp</label>
+          <input type="tel" placeholder="08xxxxxxxxxx" required />
+        </div>
+        <div class="form-group">
+          <label>Layanan yang Dibutuhkan</label>
+          <select required>
+            <option value="">Pilih Layanan...</option>
+            <option>Konsultasi Umum</option>
+            <option>Kesehatan Ibu & Anak</option>
+            <option>Imunisasi</option>
+            <option>Laboratorium</option>
+            <option>USG & Rontgen</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tanggal Kunjungan</label>
+          <input type="date" required />
+        </div>
+        <div class="form-group">
+          <label>Keluhan (opsional)</label>
+          <textarea placeholder="Ceritakan keluhan Anda..." rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-primary full">Kirim Pendaftaran via WA</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="kontak">
+  <div class="container">
+    <div class="kontak-grid">
+      <div class="kontak-info">
+        <div class="tag">Hubungi Kami</div>
+        <h2>Ada <em>Pertanyaan?</em></h2>
+        <p>Tim kami siap membantu Anda setiap hari. Jangan ragu menghubungi kami.</p>
+        <div class="kontak-links">
+          <a href="https://wa.me/6285363281138" target="_blank" class="kontak-btn wa">
+            <span>💬</span> WhatsApp Kami
+          </a>
+          <a href="tel:085363281138" class="kontak-btn phone">
+            <span>📞</span> Telepon Langsung
+          </a>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <div class="map-inner">
+          <span>🗺️</span>
+          <p>Jl. Poros No. 45<br />Sungai Sirih, Riau</p>
+          <a href="https://maps.google.com" target="_blank" class="map-link">Lihat di Google Maps →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-cross">✚</span>
+          <span>Klinik <em>Iis</em></span>
+        </a>
+        <p>Melayani dengan hati untuk kesehatan keluarga Indonesia sejak 2010.</p>
+        <div class="socials">
+          <a href="#">📘</a>
+          <a href="#">📸</a>
+          <a href="https://wa.me/6281234567890">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#">Konsultasi Umum</a></li>
+          <li><a href="#">Kesehatan Anak</a></li>
+          <li><a href="#">Imunisasi</a></li>
+          <li><a href="#">Laboratorium</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Klinik</h4>
+        <ul>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Tim Dokter</a></li>
+          <li><a href="#">Jadwal</a></li>
+          <li><a href="#">Blog Kesehatan</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <ul>
+          <li>📞 0812-3456-7890</li>
+          <li>📧 info@klinik-iis.com</li>
+          <li>📍 Jl. Poros No. 45</li>
+          <li>🕐 Buka Setiap Hari</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Klinik Iis. All rights reserved.</p>
+      <p>Dibuat dengan ❤️ untuk kesehatan Anda</p>
+    </div>
+  </div>
+</footer>
+
+<!-- CHATBOT BUTTON -->
+<div class="chatbot-fab" id="chatbotFab" title="Chat dengan Kami">
+  <span class="fab-icon">💬</span>
+  <span class="fab-label">Chat</span>
+  <span class="fab-dot"></span>
+</div>
+
+<!-- CHATBOT WIDGET -->
+<div class="chatbot-widget" id="chatbotWidget">
+  <div class="chatbot-header">
+    <div class="chatbot-avatar">👩‍⚕️</div>
+    <div>
+      <strong>Asisten Klinik Iis</strong>
+      <small>🟢 Online sekarang</small>
+    </div>
+    <button class="chatbot-close" id="chatbotClose">✕</button>
+  </div>
+  <div class="chatbot-body" id="chatbotBody">
+    <div class="chat-msg bot">
+      <p>Halo! 👋 Selamat datang di <strong>Klinik Iis</strong>.<br />Ada yang bisa saya bantu?</p>
+    </div>
+    <div class="quick-replies">
+      <button onclick="sendQuick('jam buka')">🕐 Jam Buka</button>
+      <button onclick="sendQuick('layanan')">💊 Layanan</button>
+      <button onclick="sendQuick('daftar')">📋 Cara Daftar</button>
+      <button onclick="sendQuick('dokter')">👩‍⚕️ Dokter</button>
+    </div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" id="chatInput" placeholder="Ketik pesan..." />
+    <button id="sendBtn" onclick="sendMessage()">➤</button>
+  </div>
+  <div class="chatbot-footer">
+    <a href="https://wa.me/6281234567890?text=Halo%20Klinik%20Iis" target="_blank">
+      💬 Lanjut chat di WhatsApp
+    </a>
+  </div>
+</div>
+
+<!-- WA FLOAT BUTTON -->
+<a href="https://wa.me/6281234567890?text=Halo%20Klinik%20Iis%2C%20saya%20ingin%20bertanya..." 
+   target="_blank" class="wa-float" title="Chat WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
+    <path d="M16 0C7.163 0 0 7.163 0 16c0 2.826.736 5.476 2.018 7.78L0 32l8.437-2.011A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.077 22.25c-.335.944-1.658 1.726-2.728 1.954-.727.154-1.676.277-4.873-1.047-4.09-1.67-6.726-5.82-6.928-6.088-.195-.268-1.64-2.185-1.64-4.168 0-1.983 1.04-2.957 1.41-3.363.368-.406.803-.508 1.07-.508.268 0 .537.003.77.013.248.011.581-.094.91.694.335.805 1.14 2.79 1.24 2.99.1.2.166.434.033.703-.134.268-.2.434-.4.668-.2.234-.42.523-.6.703-.2.2-.408.417-.175.817.234.4.1.04 2.08 3.37 1.435 2.45 2.87 3.213 3.18 3.37.335.17.535.143.735-.086.2-.228.865-.993 1.095-1.335.228-.34.455-.285.768-.171.308.114 1.956.922 2.292 1.09.335.167.56.25.64.39.083.14.083.806-.25 1.75z"/>
+  </svg>
+</a>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
